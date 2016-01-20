@@ -34,7 +34,8 @@ PRODUCT_COPY_FILES += \
     device/lge/w55ds/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/lge/w55ds/prebuilt/etc/thermal-engine-8610.conf:system/etc/thermal-engine-8610.conf \
     device/lge/w55ds/prebuilt/usr/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-    device/lge/w55ds/fstab.msm8610:root/fstab.msm8610
+    device/lge/w55ds/fstab.msm8610:root/fstab.msm8610 \
+    vendor/aosp/prebuilt/common/media/bootanimation.zip:system/media/bootanimation.zip
 
 PRODUCT_LOCALES := en_US
 PRODUCT_LOCALES += hdpi

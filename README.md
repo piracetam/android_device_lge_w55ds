@@ -1,20 +1,24 @@
-CyanogenMod 12.1 device configuration for LG L65 D285
+The Android Open Source Project Lollipop 5.1
+--------------------------
 
-How to build:
--------------
+Set working directory:
+```shell
+    mkdir aosp && cd aosp
+```
 
-Initializing a Build Environment:
-
-    https://source.android.com/source/initializing.html
-
-Initialize repo:
-
-    repo init -u git://github.com/CyanogenMod/android.git -b cm-12.1
-
-    curl --create-dirs -L -o .repo/local_manifests/local_manifest.xml -O -L https://raw.githubusercontent.com/L65/android_local_manifest/cm-12.1/local_manifest.xml
+Initialize your local repository using the AOSP trees:
+```shell
+    repo init -u git://github.com/F-AOSP/manifest.git -b lollipop-5.1
+```
+Add LG L65 resources:
+```shell
+    curl --create-dirs -L -o .repo/local_manifests/local_manifest.xml -O -L https://raw.githubusercontent.com/piracetam/android_local_manifest/aosp/local_manifest.xml
+```
+Then sync up:
+```shell
     repo sync
-
-Compile:
-
-    . build/envsetup.sh
-    brunch cm_w55ds-userdebug
+```
+Finally, build it:
+```shell
+    ./build.sh w55ds
+```
